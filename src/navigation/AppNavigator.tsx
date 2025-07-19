@@ -102,7 +102,7 @@ export default function AppNavigator() {
             backgroundColor: '#000000',
           },
           headerTintColor: '#f59e0b',
-          headerBackTitleVisible: false,
+          headerBackVisible: true,
         }}
       />
       <Stack.Screen 
@@ -115,7 +115,7 @@ export default function AppNavigator() {
             backgroundColor: '#000000',
           },
           headerTintColor: '#f59e0b',
-          headerBackTitleVisible: false,
+          headerBackVisible: true,
         }}
       />
       <Stack.Screen 
@@ -128,7 +128,7 @@ export default function AppNavigator() {
             backgroundColor: '#000000',
           },
           headerTintColor: '#f59e0b',
-          headerBackTitleVisible: false,
+          headerBackVisible: true,
           headerTitleStyle: {
             fontWeight: 'bold',
           },
@@ -144,7 +144,7 @@ export default function AppNavigator() {
             backgroundColor: '#000000',
           },
           headerTintColor: '#f59e0b',
-          headerBackTitleVisible: false,
+          headerBackVisible: true,
           headerTitleStyle: {
             fontWeight: 'bold',
           },

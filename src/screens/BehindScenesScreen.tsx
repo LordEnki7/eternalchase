@@ -264,7 +264,7 @@ export default function BehindScenesScreen() {
                 <Text className="text-gray-300 text-sm">Film adaptation pre-production and expanded universe development</Text>
               </View>
             </View>
-          </div>
+          </View>
         </View>
 
         {/* Awards & Recognition */}

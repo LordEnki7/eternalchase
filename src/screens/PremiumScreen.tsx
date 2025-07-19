@@ -261,7 +261,7 @@ export default function PremiumScreen() {
                 <View className="items-end">
                   <Text className="text-white text-2xl font-bold">$9.99</Text>
                   <Text className="text-gray-400 text-sm">per month</Text>
-                </div>
+                </View>
               </View>
             </Pressable>
           </View>

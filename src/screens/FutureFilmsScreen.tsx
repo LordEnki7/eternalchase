@@ -312,7 +312,7 @@ export default function FutureFilmsScreen() {
                 </Text>
               </View>
             ))}
-          </div>
+          </View>
         </View>
 
         {/* Fan Engagement */}

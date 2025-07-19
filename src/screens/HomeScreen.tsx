@@ -21,7 +21,7 @@ export default function HomeScreen() {
     initializeContent();
   }, [initializeContent]);
 
-  const handleNavigateToSection = (section: keyof RootStackParamList) => {
+  const handleNavigateToSection = (section: 'BehindScenes' | 'FutureFilms') => {
     navigation.navigate(section);
   };
 
@@ -69,7 +69,7 @@ export default function HomeScreen() {
             {/* Main CTA */}
             <Pressable 
               className="bg-amber-500 rounded-full px-8 py-4 shadow-lg"
-              onPress={() => navigation.navigate('MainTabs', { screen: 'Chapters' })}
+              onPress={() => navigation.navigate('MainTabs')}
             >
               <Text className="text-black font-bold text-lg">
                 Continue Your Journey
@@ -100,7 +100,7 @@ export default function HomeScreen() {
           {/* Trilogy Hub */}
           <Pressable 
             className="bg-gray-900 border border-gray-800 rounded-xl p-6"
-            onPress={() => navigation.navigate('MainTabs', { screen: 'Chapters' })}
+            onPress={() => navigation.navigate('MainTabs')}
           >
             <View className="flex-row items-center justify-between">
               <View className="flex-1">
@@ -118,7 +118,7 @@ export default function HomeScreen() {
           {/* Character Universe */}
           <Pressable 
             className="bg-gray-900 border border-gray-800 rounded-xl p-6"
-            onPress={() => navigation.navigate('MainTabs', { screen: 'Characters' })}
+            onPress={() => navigation.navigate('MainTabs')}
           >
             <View className="flex-row items-center justify-between">
               <View className="flex-1">
@@ -136,7 +136,7 @@ export default function HomeScreen() {
           {/* Premium Content */}
           <Pressable 
             className="bg-gradient-to-r from-amber-900/30 to-amber-800/30 border border-amber-700/50 rounded-xl p-6"
-            onPress={() => navigation.navigate('MainTabs', { screen: 'Premium' })}
+            onPress={() => navigation.navigate('MainTabs')}
           >
             <View className="flex-row items-center justify-between">
               <View className="flex-1">

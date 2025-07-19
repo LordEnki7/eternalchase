@@ -27,9 +27,9 @@ export default function ChapterDetailScreen() {
   }
 
   const bookColors = {
-    1: ['#1e3a8a', '#3b82f6', '#1e40af'],
-    2: ['#7c2d12', '#dc2626', '#991b1b'], 
-    3: ['#365314', '#16a34a', '#15803d']
+    1: ['#1e3a8a', '#3b82f6', '#1e40af'] as const,
+    2: ['#7c2d12', '#dc2626', '#991b1b'] as const, 
+    3: ['#365314', '#16a34a', '#15803d'] as const
   };
 
   const togglePlayback = () => {

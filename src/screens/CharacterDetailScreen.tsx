@@ -27,10 +27,10 @@ export default function CharacterDetailScreen() {
   }
 
   const gradientColors = {
-    kael: ['#1e3a8a', '#3b82f6', '#1e40af'],
-    lyra: ['#7c2d12', '#dc2626', '#991b1b'],
-    magnus: ['#4c1d95', '#8b5cf6', '#7c3aed'],
-    vera: ['#365314', '#16a34a', '#15803d']
+    kael: ['#1e3a8a', '#3b82f6', '#1e40af'] as const,
+    lyra: ['#7c2d12', '#dc2626', '#991b1b'] as const,
+    magnus: ['#4c1d95', '#8b5cf6', '#7c3aed'] as const,
+    vera: ['#365314', '#16a34a', '#15803d'] as const
   };
 
   const characterArcs = {

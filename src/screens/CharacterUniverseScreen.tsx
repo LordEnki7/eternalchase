@@ -23,10 +23,10 @@ export default function CharacterUniverseScreen() {
 
   const CharacterCard = ({ character, index }: { character: any, index: number }) => {
     const gradientColors = [
-      ['#1e3a8a', '#3b82f6', '#1e40af'], // Kael - Blue
-      ['#7c2d12', '#dc2626', '#991b1b'], // Lyra - Red  
-      ['#4c1d95', '#8b5cf6', '#7c3aed'], // Magnus - Purple
-      ['#365314', '#16a34a', '#15803d']  // Vera - Green
+      ['#1e3a8a', '#3b82f6', '#1e40af'] as const, // Kael - Blue
+      ['#7c2d12', '#dc2626', '#991b1b'] as const, // Lyra - Red  
+      ['#4c1d95', '#8b5cf6', '#7c3aed'] as const, // Magnus - Purple
+      ['#365314', '#16a34a', '#15803d'] as const  // Vera - Green
     ];
 
     return (
