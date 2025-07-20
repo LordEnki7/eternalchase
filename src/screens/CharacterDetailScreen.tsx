@@ -175,48 +175,97 @@ export default function CharacterDetailScreen() {
                   Character Attributes
                 </Text>
                 
-                {character.id === 'lyra' ? (
-                  // Special stats for Lyra based on her card
+                {character.stats ? (
                   <View className="space-y-4">
-                    <View className="flex-row items-center justify-between">
-                      <Text className="text-gray-300 text-lg">Intellect</Text>
-                      <View className="flex-row items-center">
-                        <Text className="text-amber-500 text-2xl font-bold mr-2">9</Text>
-                        <View className="bg-gray-700 rounded-full h-3 w-20">
-                          <View className="bg-amber-500 rounded-full h-3" style={{ width: '90%' }} />
+                    {character.stats.energy && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Energy</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-cyan-400 text-xl font-bold mr-2">{character.stats.energy}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full h-3" 
+                              style={{ width: `${character.stats.energy}%` }}
+                            />
+                          </View>
                         </View>
                       </View>
-                    </View>
+                    )}
                     
-                    <View className="flex-row items-center justify-between">
-                      <Text className="text-gray-300 text-lg">Heart</Text>
-                      <View className="flex-row items-center">
-                        <Text className="text-red-400 text-2xl font-bold mr-2">10</Text>
-                        <View className="bg-gray-700 rounded-full h-3 w-20">
-                          <View className="bg-red-400 rounded-full h-3 w-full" />
+                    {character.stats.intelligence && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Intelligence</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-cyan-400 text-xl font-bold mr-2">{character.stats.intelligence}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full h-3" 
+                              style={{ width: `${character.stats.intelligence}%` }}
+                            />
+                          </View>
                         </View>
                       </View>
-                    </View>
+                    )}
                     
-                    <View className="flex-row items-center justify-between">
-                      <Text className="text-gray-300 text-lg">Combat</Text>
-                      <View className="flex-row items-center">
-                        <Text className="text-blue-400 text-2xl font-bold mr-2">7</Text>
-                        <View className="bg-gray-700 rounded-full h-3 w-20">
-                          <View className="bg-blue-400 rounded-full h-3" style={{ width: '70%' }} />
+                    {character.stats.combat && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Combat</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-cyan-400 text-xl font-bold mr-2">{character.stats.combat}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full h-3" 
+                              style={{ width: `${character.stats.combat}%` }}
+                            />
+                          </View>
                         </View>
                       </View>
-                    </View>
+                    )}
                     
-                    <View className="flex-row items-center justify-between">
-                      <Text className="text-gray-300 text-lg">Cosmic Bond</Text>
-                      <View className="flex-row items-center">
-                        <Text className="text-purple-400 text-2xl font-bold mr-2">9</Text>
-                        <View className="bg-gray-700 rounded-full h-3 w-20">
-                          <View className="bg-purple-400 rounded-full h-3" style={{ width: '90%' }} />
+                    {character.stats.love && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Love</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-cyan-400 text-xl font-bold mr-2">{character.stats.love}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full h-3" 
+                              style={{ width: `${character.stats.love}%` }}
+                            />
+                          </View>
                         </View>
                       </View>
-                    </View>
+                    )}
+                    
+                    {character.stats.wisdom && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Wisdom</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-amber-400 text-xl font-bold mr-2">{character.stats.wisdom}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-amber-500 to-amber-400 rounded-full h-3" 
+                              style={{ width: `${character.stats.wisdom}%` }}
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    )}
+                    
+                    {character.stats.spirituality && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Spirituality</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-amber-400 text-xl font-bold mr-2">{character.stats.spirituality}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-amber-500 to-amber-400 rounded-full h-3" 
+                              style={{ width: `${character.stats.spirituality}%` }}
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    )}
                     
                     <View className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3 mt-4">
                       <Text className="text-amber-400 text-sm font-semibold text-center">
@@ -225,25 +274,15 @@ export default function CharacterDetailScreen() {
                     </View>
                   </View>
                 ) : (
-                  // Default stats for other characters
+                  // Default stats for characters without card stats
                   <View className="space-y-4">
                     <View>
                       <View className="flex-row justify-between mb-2">
                         <Text className="text-gray-300">Power Level</Text>
-                        <Text className="text-amber-500">Immortal</Text>
+                        <Text className="text-amber-500">Cosmic</Text>
                       </View>
                       <View className="bg-gray-700 rounded-full h-2">
                         <View className="bg-amber-500 rounded-full h-2 w-5/6" />
-                      </View>
-                    </View>
-                    
-                    <View>
-                      <View className="flex-row justify-between mb-2">
-                        <Text className="text-gray-300">Wisdom</Text>
-                        <Text className="text-amber-500">Ancient</Text>
-                      </View>
-                      <View className="bg-gray-700 rounded-full h-2">
-                        <View className="bg-amber-500 rounded-full h-2 w-4/5" />
                       </View>
                     </View>
                     
@@ -253,7 +292,7 @@ export default function CharacterDetailScreen() {
                         <Text className="text-amber-500">Legendary</Text>
                       </View>
                       <View className="bg-gray-700 rounded-full h-2">
-                        <View className="bg-amber-500 rounded-full h-2 w-3/4" />
+                        <View className="bg-amber-500 rounded-full h-2 w-4/5" />
                       </View>
                     </View>
                   </View>

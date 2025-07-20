@@ -18,6 +18,14 @@ interface Character {
   imageUrl?: string;
   background: string;
   role: string;
+  stats?: {
+    energy?: number;
+    intelligence?: number;
+    combat?: number;
+    love?: number;
+    wisdom?: number;
+    spirituality?: number;
+  };
 }
 
 interface DeletedScene {
@@ -92,11 +100,17 @@ export const useAppStore = create<AppState>()(
         const characters: Character[] = [
           {
             id: 'kael',
-            name: 'Kael (Auron)',
+            name: 'Kael',
             role: 'The Starborn Seeker',
-            description: 'A space-faring warrior who follows mysterious signals across the galaxy, discovering his true identity as Auron - one of the original Starborn guardians.',
-            background: 'Kael sits alone in the observation chamber of the Eclipse Vow, drawn by a spectral frequency that leads him to Isla Noctis. His memories of being Auron, the Starborn Blade, slowly return as he reconnects with his cosmic purpose.',
-            imageUrl: 'kael-profile.jpg'
+            description: 'Confessing but fearless, a protector in love and deathly peril. A space-faring warrior who follows mysterious signals across the galaxy.',
+            background: 'Kael sits alone in the observation chamber of the Eclipse Vow, drawn by a spectral frequency that leads him to Isla Noctis. His memories of being Auron, the Starborn Blade, slowly return as he reconnects with his cosmic purpose. His attributes shine through: high energy, intelligence, combat prowess, and boundless love.',
+            imageUrl: 'https://images.composerapi.com/D42E3070-4A07-4276-973C-6CD54ECDBF9F.jpg',
+            stats: {
+              energy: 95,
+              intelligence: 88,
+              combat: 92,
+              love: 98
+            }
           },
           {
             id: 'lyra',
@@ -128,7 +142,13 @@ export const useAppStore = create<AppState>()(
             role: 'Spirit Flame / Wisdom',
             description: 'Lyra\'s grandmother who hides a profound secret - she was once a member of the Divine Source\'s Inner Choir and a Keyholder.',
             background: 'She burned for truth, and lit the path behind her. A former Keyholder with the power to lock and unlock Starborn bonds, Grandma Ama helped separate the trio to protect the cosmos, ultimately sacrificing herself to give them a chance at redemption.',
-            imageUrl: 'https://images.composerapi.com/E79CDFBE-179E-43D5-96BD-DDEAF9CBDC42.jpg'
+            imageUrl: 'https://images.composerapi.com/E79CDFBE-179E-43D5-96BD-DDEAF9CBDC42.jpg',
+            stats: {
+              wisdom: 98,
+              spirituality: 95,
+              love: 92,
+              energy: 85
+            }
           }
         ];
 
