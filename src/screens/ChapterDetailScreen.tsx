@@ -41,17 +41,28 @@ export default function ChapterDetailScreen() {
     }
   };
 
-  const mockChapterText = `The morning air carried the scent of eternity—a contradiction that Kael had learned to recognize over countless centuries. It was neither sweet nor bitter, but something that spoke to the deepest parts of his immortal soul, reminding him of all the mornings he had witnessed, and all those still to come.
+  const getChapterText = (chapterId: string) => {
+    const chapterTexts: { [key: string]: string } = {
+      'b1c1': `The stars above Earth's outer rim glittered like secrets waiting to be uncovered. Kael sat alone in the observation chamber of the Eclipse Vow, bathed in the low blue glow of the cosmos outside and the pulsing red light on his display screen. For weeks, he had been chasing a spectral frequency — not military, not mechanical, but...alive. It was almost musical, like a song meant only for him.
 
-Standing at the edge of the precipice, he watched the sun rise over a world that seemed perpetually caught between endings and beginnings. The Eternal Chase, as the ancient ones called it, was more than just a pursuit—it was the very fabric of existence for beings like him.
+The AI voice hummed softly through the chamber. "Signal intensity rising. Source: Planet 187-K — code-named Isla Noctis. Region classified."
 
-Lyra appeared beside him as she always did, without sound or warning, as if she had stepped through the very air itself. Her presence brought both comfort and unease, for with her came the weight of prophecies and the shadow of choices yet unmade.
+Kael leaned forward. Isla Noctis. The name tasted old, like it belonged in a forgotten legend. A place untouched by colonization, still beating with the heart of the ancient world. He keyed into his system and pulled up the live feed from his stealth satellite. The cloud layer over the island rippled as though it knew it was being watched.
 
-"The convergence approaches," she said, her voice carrying harmonics that spoke to powers beyond mortal understanding. "The threads of fate are pulling tighter, Kael. Soon, there will be no more running, no more hiding from what you are."
+Then the camera sharpened on a clearing along the coastline. There she was. Lyra. She stood barefoot in damp soil, face streaked with sea mist and sweat, locked in a heated argument with an elder. Her eyes burned with fire—no fear, no hesitation. Even through the haze, Kael felt her presence strike something deep in his chest. It wasn't just attraction. It was recognition.
 
-He knew she spoke the truth. The chase that had defined his existence for millennia was reaching its crescendo. Ancient forces stirred in the depths of reality itself, and the price of immortality was finally coming due.
+"Zoom in. Stabilize feed," he whispered.
 
-The question that haunted him wasn't whether he could escape his destiny—it was whether he wanted to.`;
+The signal pulsed again. Stronger. Rhythmic. Kael stepped back from the screen like he'd been struck. "That's her," he said, more to himself than anyone. "That's the source."
+
+And somehow... he knew she was calling to him.`,
+      default: `The cosmic winds carried whispers of ancient names as our heroes continued their eternal chase across dimensions of light and shadow. Each step forward revealed new truths about their intertwined destinies, while the universe itself seemed to hold its breath, waiting to see what choice they would make when faced with the ultimate test of love versus duty.`
+    };
+    
+    return chapterTexts[chapterId] || chapterTexts.default;
+  };
+
+  const chapterText = getChapterText(chapterId);
 
   return (
     <View className="flex-1 bg-black">
@@ -158,7 +169,7 @@ The question that haunted him wasn't whether he could escape his destiny—it wa
             </View>
             
             <Text className="text-gray-300 text-base leading-7">
-              {showFullText ? mockChapterText : mockChapterText.substring(0, 200) + '...'}
+              {showFullText ? chapterText : chapterText.substring(0, 200) + '...'}
             </Text>
           </View>
         </View>

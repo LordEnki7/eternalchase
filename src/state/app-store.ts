@@ -69,89 +69,109 @@ export const useAppStore = create<AppState>()(
       
       initializeContent: () => {
         const chapters: Chapter[] = [
-          // Book 1 - The Eternal Chase
-          { id: 'b1c1', title: 'The Awakening', description: 'Kael discovers his immortal nature in a world torn by endless conflict.', bookNumber: 1, duration: '12:45' },
-          { id: 'b1c2', title: 'First Blood', description: 'The initial confrontation that sets everything in motion.', bookNumber: 1, duration: '15:30' },
-          { id: 'b1c3', title: 'The Hunt Begins', description: 'Ancient forces stir as the chase commences.', bookNumber: 1, duration: '18:20' },
-          { id: 'b1c4', title: 'Lyra\'s Revelation', description: 'A mysterious ally emerges from the shadows.', bookNumber: 1, duration: '14:15' },
-          { id: 'b1c5', title: 'Betrayal\'s Edge', description: 'Trust becomes a luxury in a world of deception.', bookNumber: 1, duration: '16:45' },
-          { id: 'b1c6', title: 'The Price of Power', description: 'Every gift comes with a cost beyond imagination.', bookNumber: 1, duration: '19:30' },
-          
-          // Book 2 - Shadows of Eternity  
-          { id: 'b2c1', title: 'Echoes of the Past', description: 'The consequences of immortality begin to surface.', bookNumber: 2, duration: '17:25' },
-          { id: 'b2c2', title: 'The Alliance', description: 'Unlikely partnerships form in desperate times.', bookNumber: 2, duration: '20:10' },
-          { id: 'b2c3', title: 'Fractured Bonds', description: 'Relationships strain under the weight of eternity.', bookNumber: 2, duration: '16:35' },
-          { id: 'b2c4', title: 'The Darkening', description: 'An ancient evil begins to wake from its slumber.', bookNumber: 2, duration: '21:45' },
-          { id: 'b2c5', title: 'Sacrifice', description: 'Some prices can only be paid with everything.', bookNumber: 2, duration: '18:50' },
-          
-          // Book 3 - Dawn of Reckoning
-          { id: 'b3c1', title: 'The Gathering Storm', description: 'All forces converge for the final confrontation.', bookNumber: 3, duration: '22:15' },
-          { id: 'b3c2', title: 'Redemption\'s Call', description: 'The chance for salvation appears at the darkest hour.', bookNumber: 3, duration: '19:40' },
-          { id: 'b3c3', title: 'The Final Chase', description: 'Everything leads to this moment of ultimate truth.', bookNumber: 3, duration: '25:30' },
-          { id: 'b3c4', title: 'Legacy of Eternity', description: 'The price of immortality is finally revealed.', bookNumber: 3, duration: '20:25' },
-          { id: 'b3c5', title: 'Beyond the Veil', description: 'Some endings are just new beginnings.', bookNumber: 3, duration: '23:45' },
-          { id: 'b3c6', title: 'Eternal Dawn', description: 'The ultimate resolution of all things.', bookNumber: 3, duration: '27:20' }
+          // Book 1 - Eternal Chase: The Pursuit for Love
+          { id: 'b1c1', title: 'The Signal Calls', description: 'Kael sits alone in the observation chamber, chasing a spectral frequency that leads him to discover Lyra on the mysterious planet Isla Noctis.', bookNumber: 1, duration: '15:45' },
+          { id: 'b1c2', title: 'The Stranger on the Shore', description: 'Lyra wakes to strange tides and discovers a crashed stranger whose face she has seen in dreams.', bookNumber: 1, duration: '12:30' },
+          { id: 'b1c3', title: 'Across the Veil (Finalized with Ship Crash)', description: 'Kael\'s ship crashes through the island\'s spiritual storms as he follows the mysterious signal calling to him.', bookNumber: 1, duration: '18:20' },
+          { id: 'b1c4', title: 'Shadows and Bloodlines', description: 'Ancient ruins reveal Lyra\'s true heritage as Riven Elari emerges from the shadows with dangerous revelations.', bookNumber: 1, duration: '16:15' },
+          { id: 'b1c5', title: 'Echoes of Power', description: 'The truth about the Aethari bloodline unfolds as Lyra discovers her cosmic inheritance and the power that marks her as a target.', bookNumber: 1, duration: '19:45' },
+          { id: 'b1c6', title: 'New Frontiers, New Foes', description: 'The Veil arrives on Isla Noctis as Commander Solenne Vire leads the hunt for Lyra and her awakening powers.', bookNumber: 1, duration: '14:30' },
+          { id: 'b1c7', title: 'Into the Fire', description: 'Raw power surges through Lyra as chaos erupts and the fragile bonds between allies are tested in battle.', bookNumber: 1, duration: '17:50' },
+          { id: 'b1c8', title: 'Fractures and Flames', description: 'The aftermath of battle reveals new fractures in their alliance as a mysterious mark appears on Lyra\'s palm.', bookNumber: 1, duration: '13:25' },
+          { id: 'b1c9', title: 'Echoes of the Infinite', description: 'Grandma reveals the shocking truth: Kael, Lyra, and Riven were once cosmic guardians whose memories were erased.', bookNumber: 1, duration: '21:15' },
+          { id: 'b1c10', title: 'The Starborn Reawakening', description: 'The Herald of the Source appears with warnings as the trio begin to remember their true names: Auron, Zahra, and their divine mission.', bookNumber: 1, duration: '20:40' },
+          { id: 'b1c11', title: 'Veil of Memory, Voice of the Deep', description: 'Lyra experiences profound visions of their past as cosmic guardians while the Primordial begins to stir from its ancient slumber.', bookNumber: 1, duration: '18:35' },
+          { id: 'b1c12', title: 'The Union Forbidden', description: 'Astrael, the Source\'s Blade, descends to prevent their reunion as the cosmic chase begins in earnest across dimensions.', bookNumber: 1, duration: '22:10' },
+          { id: 'b1c13', title: 'The Path of Betrayal', description: 'Riven faces the ultimate choice between mission and loyalty while Grandma makes her final stand against divine judgment.', bookNumber: 1, duration: '19:55' },
+          { id: 'b1c14', title: 'Ashes of the Choir', description: 'The Celestial Council fractures as Grandma\'s sacrifice ripples across the cosmos and the Primordial takes its first true form.', bookNumber: 1, duration: '24:20' },
+          { id: 'b1c15', title: 'The Place of Their Fall', description: 'The trio returns to the site of their original cosmic fall, where the Seed of the First Whisper reveals the truth about their punishment.', bookNumber: 1, duration: '23:45' },
+          { id: 'b1c16', title: 'The Broken Throne', description: 'In the ruins of memory, they discover the Divine Source has abandoned its throne, leaving creation without a ruler.', bookNumber: 1, duration: '20:30' },
+          { id: 'b1c17', title: 'Echoes of the First Light', description: 'The explosive finale as the Seed of the First Light reveals the Second Hunger and sets up the cosmic war to come.', bookNumber: 1, duration: '27:15' }
         ];
 
         const characters: Character[] = [
           {
             id: 'kael',
-            name: 'Kael Thorne',
-            role: 'The Immortal Protagonist',
-            description: 'A warrior cursed with immortality, forever bound to an endless cycle of conflict and rebirth.',
-            background: 'Once a mortal soldier, Kael was transformed by ancient magic during a battle that should have claimed his life. Now he walks between worlds, neither fully alive nor dead, carrying the weight of countless lifetimes.',
+            name: 'Kael (Auron)',
+            role: 'The Starborn Seeker',
+            description: 'A space-faring warrior who follows mysterious signals across the galaxy, discovering his true identity as Auron - one of the original Starborn guardians.',
+            background: 'Kael sits alone in the observation chamber of the Eclipse Vow, drawn by a spectral frequency that leads him to Isla Noctis. His memories of being Auron, the Starborn Blade, slowly return as he reconnects with his cosmic purpose.',
             imageUrl: 'kael-profile.jpg'
           },
           {
             id: 'lyra',
-            name: 'Lyra Shadowheart',
-            role: 'The Enigmatic Ally',
-            description: 'A mysterious figure with her own connection to the forces that bind Kael to his fate.',
-            background: 'Lyra appears when least expected and disappears just as quickly. Her knowledge of ancient secrets and hidden truths makes her both invaluable and dangerous.',
+            name: 'Lyra (Zahra/Solis)',
+            role: 'The Aethari Descendant',
+            description: 'A mysterious island dweller who discovers she is the last key to an ancient weapon, descended from the cosmic Worldweavers.',
+            background: 'Living on Isla Noctis with her grandmother, Lyra awakens to her true heritage as Zahra (Solis), one of the Aethari bloodline. Her power can either heal or destroy, making her both salvation and target.',
             imageUrl: 'lyra-profile.jpg'
           },
           {
-            id: 'magnus',
-            name: 'Magnus the Eternal',
-            role: 'The Ancient Adversary',
-            description: 'The original immortal, whose corruption spans millennia and threatens to consume all existence.',
-            background: 'Once a guardian of balance, Magnus fell to the temptations of eternal power. Now he seeks to remake the world in his own twisted image.',
-            imageUrl: 'magnus-profile.jpg'
+            id: 'riven',
+            name: 'Riven Elari',
+            role: 'The Defected Tactician',
+            description: 'A former Veil strategist who carries dangerous knowledge about the trio\'s cosmic origins and the ancient powers they once wielded.',
+            background: 'Once a cold-blooded Veil tactician, Riven defected when he learned the truth about the Starborn. He holds fragments of their shared past and faces the ultimate choice between mission and loyalty.',
+            imageUrl: 'riven-profile.jpg'
           },
           {
-            id: 'vera',
-            name: 'Vera Lightbringer',
-            role: 'The Mortal Champion',
-            description: 'A human warrior who refuses to accept the inevitability of eternal conflict.',
-            background: 'Despite her mortality, Vera possesses a strength of spirit that rivals even the immortals. She represents hope for breaking the endless cycle.',
-            imageUrl: 'vera-profile.jpg'
+            id: 'maya',
+            name: 'Maya',
+            role: 'The Divine Watcher',
+            description: 'A guardian sent to watch over the Starborn, whose true nature is revealed as events unfold.',
+            background: 'More than human, Maya serves as a guide and protector, sent by higher powers to watch over Kael, Lyra, and Riven as they rediscover their cosmic identities.',
+            imageUrl: 'maya-profile.jpg'
+          },
+          {
+            id: 'grandma',
+            name: 'Grandma (Former Keyholder)',
+            role: 'The Hidden Protector',
+            description: 'Lyra\'s grandmother who hides a profound secret - she was once a member of the Divine Source\'s Inner Choir.',
+            background: 'A former Keyholder with the power to lock and unlock Starborn bonds, she helped separate the trio to protect the cosmos, sacrificing herself to give them a chance at redemption.',
+            imageUrl: 'grandma-profile.jpg'
           }
         ];
 
         const deletedScenes: DeletedScene[] = [
           {
             id: 'ds1',
-            title: 'The First Transformation',
-            description: 'Kael\'s original transformation scene with extended dialogue.',
-            chapterRelated: 'The Awakening',
-            content: 'In this deleted scene, we see the full ritual that bound Kael to immortality, including the warnings he chose to ignore...',
+            title: 'The Eclipse Vow Bridge Scene',
+            description: 'Extended sequence of Kael receiving the mysterious signal with Maya\'s full dialogue.',
+            chapterRelated: 'The Signal Calls',
+            content: 'In this deleted scene, Maya provides more context about the signal\'s origins and warns Kael about the spiritual storms of Isla Noctis. The conversation reveals more about their shared history aboard the Eclipse Vow...',
             isPremium: true
           },
           {
             id: 'ds2',
-            title: 'Lyra\'s Past',
-            description: 'A glimpse into Lyra\'s mysterious origins.',
-            chapterRelated: 'Lyra\'s Revelation',
-            content: 'This scene reveals more about Lyra\'s connection to the ancient powers and her true purpose in Kael\'s journey...',
+            title: 'Grandma\'s Keyholder Memories',
+            description: 'Extended flashback to Grandma\'s time as a member of the Inner Choir.',
+            chapterRelated: 'Echoes of the Infinite',
+            content: 'This scene shows Grandma\'s original role in separating the Starborn trio, including her emotional struggle with the decision and her secret meetings with the Divine Source...',
             isPremium: true
           },
           {
             id: 'ds3',
-            title: 'The Lost Alliance',
-            description: 'An alternate version of the alliance formation.',
-            chapterRelated: 'The Alliance',
-            content: 'Originally, the alliance included a fifth member whose betrayal would have changed everything...',
+            title: 'Riven\'s Defection from the Veil',
+            description: 'The full story of how Riven discovered the truth and chose to betray his commanders.',
+            chapterRelated: 'Shadows and Bloodlines',
+            content: 'Originally, this scene showed Riven\'s confrontation with Commander Solenne Vire and his discovery of the Starborn files, leading to his decision to protect rather than hunt them...',
             isPremium: false
+          },
+          {
+            id: 'ds4',
+            title: 'The Primordial\'s First Words',
+            description: 'Extended dialogue between the awakening Primordial and Lyra.',
+            chapterRelated: 'Veil of Memory, Voice of the Deep',
+            content: 'In this scene, the Primordial reveals more about its true nature and its connection to the Starborn\'s original mission, challenging Lyra\'s understanding of good and evil...',
+            isPremium: true
+          },
+          {
+            id: 'ds5',
+            title: 'Astrael\'s Hesitation',
+            description: 'A moment where the Source\'s Blade questions his orders.',
+            chapterRelated: 'The Union Forbidden',
+            content: 'This deleted scene shows Astrael\'s internal conflict as he prepares to hunt his former brother-in-arms, revealing their shared history and his doubt about the Source\'s judgment...',
+            isPremium: true
           }
         ];
 

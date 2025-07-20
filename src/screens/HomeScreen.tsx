@@ -47,16 +47,21 @@ export default function HomeScreen() {
         >
           <View className="items-center">
             {/* Main Title */}
-            <Text className="text-white text-5xl font-bold text-center mb-2 tracking-wider">
-              ETERNAL
+            <Text className="text-white text-4xl font-bold text-center mb-1 tracking-wider">
+              ETERNAL CHASE
             </Text>
-            <Text className="text-amber-500 text-5xl font-bold text-center mb-4 tracking-wider">
-              CHASE
+            <Text className="text-amber-500 text-2xl font-bold text-center mb-2 tracking-wide">
+              The Pursuit for Love
+            </Text>
+            
+            {/* Author */}
+            <Text className="text-gray-400 text-base text-center mb-6">
+              by Shawn Rulz
             </Text>
             
             {/* Subtitle */}
             <Text className="text-gray-300 text-lg text-center mb-8 leading-6 max-w-sm">
-              A Cinematic Universe of Immortal Conflict
+              A Cinematic Universe of Starborn Guardians
             </Text>
             
             {/* Book Status */}

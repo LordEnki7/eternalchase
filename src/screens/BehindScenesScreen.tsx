@@ -158,11 +158,11 @@ export default function BehindScenesScreen() {
           <View className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
             <View className="flex-row items-center mb-4">
               <View className="bg-amber-500 rounded-full w-16 h-16 items-center justify-center mr-4">
-                <Text className="text-black text-2xl font-bold">A</Text>
+                <Text className="text-black text-2xl font-bold">SR</Text>
               </View>
               <View className="flex-1">
                 <Text className="text-white text-xl font-bold">
-                  From the Author
+                  Shawn Rulz
                 </Text>
                 <Text className="text-gray-400">
                   Creator of the Eternal Chase Universe
@@ -171,7 +171,7 @@ export default function BehindScenesScreen() {
             </View>
             
             <Text className="text-gray-300 text-base leading-7">
-              "Creating the Eternal Chase has been my own journey through immortality—not literally, of course, but emotionally and creatively. Each character represents a different aspect of the human condition when faced with eternity."
+              "Creating the Eternal Chase saga has been my exploration of love transcending cosmic boundaries. What happens when divine beings discover they're more human than they thought? The journey from 'The Signal Calls' to 'Echoes of the First Light' reflects our own pursuit of connection in an infinite universe."
             </Text>
           </View>
         </View>

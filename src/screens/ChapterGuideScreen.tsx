@@ -19,9 +19,9 @@ export default function ChapterGuideScreen() {
   const [selectedBook, setSelectedBook] = useState<1 | 2 | 3>(currentBook);
 
   const bookTitles = {
-    1: 'The Eternal Chase',
-    2: 'Shadows of Eternity', 
-    3: 'Dawn of Reckoning'
+    1: 'Eternal Chase: The Pursuit for Love',
+    2: 'Eternal Chase: The Spiral War', 
+    3: 'Eternal Chase: Ascension\'s Edge'
   };
 
   const bookColors = {
