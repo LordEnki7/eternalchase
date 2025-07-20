@@ -12,6 +12,7 @@ import ChapterDetailScreen from '../screens/ChapterDetailScreen';
 import CharacterDetailScreen from '../screens/CharacterDetailScreen';
 import BehindScenesScreen from '../screens/BehindScenesScreen';
 import FutureFilmsScreen from '../screens/FutureFilmsScreen';
+import MysteriesScreen from '../screens/MysteriesScreen';
 
 export type RootStackParamList = {
   MainTabs: undefined;
@@ -19,6 +20,7 @@ export type RootStackParamList = {
   CharacterDetail: { characterId: string };
   BehindScenes: undefined;
   FutureFilms: undefined;
+  Mysteries: undefined;
 };
 
 export type TabParamList = {
@@ -140,6 +142,22 @@ export default function AppNavigator() {
         options={{
           headerShown: true,
           headerTitle: 'Future Films',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTintColor: '#f59e0b',
+          headerBackVisible: true,
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+      <Stack.Screen 
+        name="Mysteries" 
+        component={MysteriesScreen}
+        options={{
+          headerShown: true,
+          headerTitle: 'Decode the Source',
           headerStyle: {
             backgroundColor: '#000000',
           },

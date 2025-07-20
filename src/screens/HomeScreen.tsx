@@ -21,7 +21,7 @@ export default function HomeScreen() {
     initializeContent();
   }, [initializeContent]);
 
-  const handleNavigateToSection = (section: 'BehindScenes' | 'FutureFilms') => {
+  const handleNavigateToSection = (section: 'BehindScenes' | 'FutureFilms' | 'Mysteries') => {
     navigation.navigate(section);
   };
 
@@ -204,6 +204,29 @@ export default function HomeScreen() {
                 </Text>
               </View>
               <Ionicons name="film" size={24} color="#f59e0b" />
+            </View>
+          </Pressable>
+
+          <Pressable 
+            className="bg-gradient-to-r from-purple-900/30 to-amber-900/30 border border-purple-700/50 rounded-xl p-6"
+            onPress={() => handleNavigateToSection('Mysteries')}
+          >
+            <View className="flex-row items-center justify-between">
+              <View className="flex-1">
+                <View className="flex-row items-center mb-2">
+                  <Ionicons name="eye" size={18} color="#f59e0b" />
+                  <Text className="text-white text-lg font-semibold ml-2">
+                    Decode the Source
+                  </Text>
+                  <View className="bg-purple-500 rounded-full px-2 py-1 ml-2">
+                    <Text className="text-white text-xs font-bold">MYSTERY</Text>
+                  </View>
+                </View>
+                <Text className="text-purple-300 text-sm">
+                  "XVII. The dawn conceals the dusk..."
+                </Text>
+              </View>
+              <Ionicons name="key" size={24} color="#f59e0b" />
             </View>
           </Pressable>
         </View>

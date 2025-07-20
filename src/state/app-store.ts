@@ -110,7 +110,23 @@ export const useAppStore = create<AppState>()(
           { id: 'b1c14', title: 'Ashes of the Choir', description: 'The Celestial Council fractures as Grandma\'s sacrifice ripples across the cosmos and the Primordial takes its first true form.', bookNumber: 1, duration: '24:20' },
           { id: 'b1c15', title: 'The Place of Their Fall', description: 'The trio returns to the site of their original cosmic fall, where the Seed of the First Whisper reveals the truth about their punishment.', bookNumber: 1, duration: '23:45' },
           { id: 'b1c16', title: 'The Broken Throne', description: 'In the ruins of memory, they discover the Divine Source has abandoned its throne, leaving creation without a ruler.', bookNumber: 1, duration: '20:30' },
-          { id: 'b1c17', title: 'Echoes of the First Light', description: 'The explosive finale as the Seed of the First Light reveals the Second Hunger and sets up the cosmic war to come.', bookNumber: 1, duration: '27:15' }
+          { id: 'b1c17', title: 'Echoes of the First Light', description: 'The explosive finale as the Seed of the First Light reveals the Second Hunger and sets up the cosmic war to come.', bookNumber: 1, duration: '27:15' },
+
+          // Book 2 - Eternal Chase: The Spiral War
+          { id: 'b2c1', title: 'Fractured Light', description: 'Riven awakens in the Broken Spiral, a realm where time folds back on itself and realities overlap like shattered glass.', bookNumber: 2, duration: '16:20' },
+          { id: 'b2c2', title: 'The Heart of the Source', description: 'Kael and Lyra enter the City of Light and Code, encountering the Source\'s consciousness and exiled Choir members.', bookNumber: 2, duration: '18:45' },
+          { id: 'b2c3', title: 'Shadows and Echoes', description: 'Riven\'s journey darkens as corrupted Judicars hunt him through folding realities and collapsing time loops.', bookNumber: 2, duration: '20:15' },
+          { id: 'b2c4', title: 'The Judicars\' Wrath', description: 'Kael and Lyra face the Judicars in the City of Light, battling spectral enforcers while the city itself reacts to their conflict.', bookNumber: 2, duration: '19:30' },
+          { id: 'b2c5', title: 'Threads of Fate', description: 'Riven encounters the Weaver\'s shadow and learns of a prophecy binding three souls: the lost, the light, and the shadow.', bookNumber: 2, duration: '15:40' },
+          { id: 'b2c6', title: 'Embers of Trust', description: 'In a quiet moment, Kael and Lyra deepen their bond while hidden forces sow doubt and test their resolve.', bookNumber: 2, duration: '14:25' },
+          { id: 'b2c7', title: 'Spiral\'s Edge', description: 'Riven stands at the edge of crumbling reality, using the cosmic thread to bind fractured time and space together.', bookNumber: 2, duration: '17:55' },
+          { id: 'b2c8', title: 'Crossroads of Fate', description: 'Kael and Lyra seek the Codex of Echoes while the Spiral\'s hunger distorts distant worlds and frays timelines.', bookNumber: 2, duration: '16:10' },
+          { id: 'b2c9', title: 'The Lost Connection', description: 'The Codex reveals their forgotten past as cosmic guardians, agents of the Divine Source bound by purpose across worlds.', bookNumber: 2, duration: '22:35' },
+          { id: 'b2c10', title: 'Threads of Fate — The Reckoning', description: 'The Grandmother reveals the truth about their separation while cosmic forces align and the Spiral tightens its grip.', bookNumber: 2, duration: '21:20' },
+          { id: 'b2c11', title: 'Quiet Before the Storm', description: 'In a fragile sanctuary, the trio confronts their fears while the Spiral\'s hunger pulses through the cracked earth.', bookNumber: 2, duration: '18:45' },
+          { id: 'b2c12', title: 'The Reckoning Chase', description: 'The sanctuary shatters as Judicars and Choir loyalists attack, plunging our heroes into a chaotic maelstrom across dimensions.', bookNumber: 2, duration: '25:10' },
+          { id: 'b2c13', title: 'Inferno and Reflection', description: 'A massive fireball erupts from Lyra\'s hands as the trio battles in a fractured cathedral of smoke and ash.', bookNumber: 2, duration: '20:45' },
+          { id: 'b2c14', title: 'Embers of Destiny', description: 'The battlefield quiets, but tensions simmer as the trio grapples with their power and the weight of their cosmic destiny.', bookNumber: 2, duration: '17:30' }
         ];
 
         const characters: Character[] = [

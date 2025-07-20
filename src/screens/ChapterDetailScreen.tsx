@@ -56,6 +56,46 @@ Then the camera sharpened on a clearing along the coastline. There she was. Lyra
 The signal pulsed again. Stronger. Rhythmic. Kael stepped back from the screen like he'd been struck. "That's her," he said, more to himself than anyone. "That's the source."
 
 And somehow... he knew she was calling to him.`,
+      'b2c1': `Riven opened his eyes to a world that didn't exist. A realm where gravity folded like paper, and colors bled through the air like spilled paint. The sky above him fractured—splintered shards of starfire floating in slow, dissonant orbits. Time wasn't a line here. It looped, twisted, doubled back on itself like a serpent eating its tail.
+
+He pushed himself up, feeling the sting of a thousand echoes brushing his skin. Faces—his faces—blurred and flickered around him, whispering fragments of memories that weren't fully his own.
+
+"You betrayed us…" one voice hissed, sharp as shattered glass.
+"You left them behind…" another moaned, heavy with regret.
+"You broke the circle…" a third whispered, fragile like a dying star.
+
+Riven's breath hitched. His chest tightened under the weight of a thousand lives he'd fractured in this place—the Broken Spiral.
+
+Then a sound—a gentle rustling, like golden silk unfurling in a breeze—called to him. From the shimmering mist stepped a figure woven from light and shadow, threads of time flowing like ribbons around them. Their eyes held the cosmos—deep, ancient, and unknowable.
+
+"You're awake," the Weaver said, voice both everywhere and nowhere.
+
+"Where am I?" Riven asked, though he already knew the answer.
+
+"The Spiral," the Weaver replied. "A wound in reality. A hunger born from the fractures you helped create."
+
+Riven swallowed hard. "I didn't mean for any of this."
+
+The Weaver smiled—if a being of stars could smile. "Intentions don't stitch the torn fabric. Only actions do."
+
+They extended a hand, and in it, a thread glowed with pulsing light—fragile, yet infinite. "This thread can bind the broken pieces. But it will cost you… more than you know."
+
+Riven hesitated, then grasped it. The Spiral rippled in response—alive, watching, hungry. His journey had begun.`,
+      'b2c6': `The sanctuary was a ghost of the old world — vines curling over fractured stone, sunlight filtering softly through shattered windows. Time moved differently here, slower, almost forgiving. But the air was thick with unspoken dread.
+
+Kael settled onto a worn ledge, his sword resting beside him like a faithful shadow. His eyes traced the dying embers of a small fire, flickering weak but stubborn.
+
+Lyra paced the length of the room, her movements restless, fingers twitching as if eager to unleash the storm within her. Every breath she took was a battle between control and surrender.
+
+"I'm scared, Kael," she confessed at last, voice barely above a whisper. "This power... it's not just energy anymore. It's like it's alive. And some days, it feels like it wants to swallow me whole."
+
+Kael's gaze lifted, steady and unwavering. "Fear doesn't make you weak. It makes you human. But you're stronger than any storm inside you."
+
+She stopped pacing, meeting his eyes with raw vulnerability. "What if one day it wins? What if it changes me so much that you can't recognize who I am anymore?"
+
+Kael took a slow breath, voice low but certain. "Then I'll fight to remember who you are. I won't let the storm erase you."
+
+A fragile silence settled between them, filled with the weight of promises and fears.`,
       default: `The cosmic winds carried whispers of ancient names as our heroes continued their eternal chase across dimensions of light and shadow. Each step forward revealed new truths about their intertwined destinies, while the universe itself seemed to hold its breath, waiting to see what choice they would make when faced with the ultimate test of love versus duty.`
     };
     
