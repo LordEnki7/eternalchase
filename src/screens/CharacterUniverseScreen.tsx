@@ -8,8 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { useAppStore } from '../state/app-store';
-import EnhancedCharacterCard from '../components/EnhancedCharacterCard';
-import RelationshipWeb from '../components/RelationshipWeb';
+
 
 const { width } = Dimensions.get('window');
 
@@ -19,7 +18,7 @@ export default function CharacterUniverseScreen() {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation<NavigationProp>();
   const { characters, fusionCards } = useAppStore();
-  const [viewMode, setViewMode] = useState<'cards' | 'relationships'>('cards');
+
 
   const handleCharacterPress = (characterId: string) => {
     navigation.navigate('CharacterDetail', { characterId });
@@ -214,32 +213,7 @@ export default function CharacterUniverseScreen() {
           </Text>
           
           {/* View Mode Selector */}
-          <View className="flex-row bg-gray-900 rounded-full p-1 mx-6 mb-6">
-            <Pressable
-              className={`flex-1 py-3 px-4 rounded-full ${
-                viewMode === 'cards' ? 'bg-amber-500' : ''
-              }`}
-              onPress={() => setViewMode('cards')}
-            >
-              <Text className={`text-center font-semibold ${
-                viewMode === 'cards' ? 'text-black' : 'text-white'
-              }`}>
-                Character Cards
-              </Text>
-            </Pressable>
-            <Pressable
-              className={`flex-1 py-3 px-4 rounded-full ${
-                viewMode === 'relationships' ? 'bg-amber-500' : ''
-              }`}
-              onPress={() => setViewMode('relationships')}
-            >
-              <Text className={`text-center font-semibold ${
-                viewMode === 'relationships' ? 'text-black' : 'text-white'
-              }`}>
-                Relationship Web
-              </Text>
-            </Pressable>
-          </View>
+
           
           {/* Stats */}
           <View className="flex-row justify-around">
@@ -306,24 +280,14 @@ export default function CharacterUniverseScreen() {
         )}
 
         {/* Dynamic Content Based on View Mode */}
-        {viewMode === 'cards' ? (
-          <View className="px-6 py-6">
-            <Text className="text-white text-2xl font-bold mb-6">
-              Individual Profiles
-            </Text>
-            {characters.filter(char => char.id !== 'source').map((character, index) => (
-              <EnhancedCharacterCard 
-                key={character.id} 
-                character={character} 
-                index={index}
-                onPress={handleCharacterPress}
-                gradientColors={gradientColors[index % gradientColors.length]}
-              />
-            ))}
-          </View>
-        ) : (
-          <RelationshipWeb />
-        )}
+        <View className="px-6 py-6">
+          <Text className="text-white text-2xl font-bold mb-6">
+            Individual Profiles
+          </Text>
+          {characters.filter(char => char.id !== 'source').map((character, index) => (
+            <CharacterCard key={character.id} character={character} index={index} />
+          ))}
+        </View>
 
         {/* Cosmic Entities */}
         <View className="px-6 pb-6">
