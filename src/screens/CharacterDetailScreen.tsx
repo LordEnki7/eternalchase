@@ -124,12 +124,12 @@ export default function CharacterDetailScreen() {
         >
           {/* Character Avatar */}
           <View className="items-center mb-6">
-            <View className="w-32 h-32 mb-4 overflow-hidden rounded-full border-4 border-white/20">
+            <View className="w-48 h-64 mb-4 overflow-hidden rounded-2xl border-4 border-white/20">
               {character.imageUrl && character.imageUrl.startsWith('http') ? (
                 <Image
                   source={{ uri: character.imageUrl }}
                   style={{ width: '100%', height: '100%' }}
-                  contentFit="cover"
+                  contentFit="contain"
                 />
               ) : (
                 <View className="bg-white/20 w-full h-full items-center justify-center">
