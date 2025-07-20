@@ -166,7 +166,7 @@ export default function MysteriesScreen() {
                 "Only unity births the true flame" - I think this refers to the fusion card we've seen. Kael and Lyra's bond is literally the key!
               </Text>
             </View>
-          </div>
+          </View>
         </View>
 
         {/* Decode Challenge */}
