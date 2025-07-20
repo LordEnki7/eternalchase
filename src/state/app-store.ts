@@ -41,6 +41,16 @@ interface DeletedScene {
   isPremium: boolean;
 }
 
+interface FusionCard {
+  id: string;
+  title: string;
+  characters: string[];
+  tagline: string;
+  description: string;
+  imageUrl: string;
+  type: 'bond' | 'conflict' | 'alliance';
+}
+
 interface AppState {
   // User state
   isPremiumUser: boolean;
@@ -52,6 +62,7 @@ interface AppState {
   chapters: Chapter[];
   characters: Character[];
   deletedScenes: DeletedScene[];
+  fusionCards: FusionCard[];
   
   // Actions
   setPremiumUser: (isPremium: boolean) => void;
@@ -72,6 +83,7 @@ export const useAppStore = create<AppState>()(
       chapters: [],
       characters: [],
       deletedScenes: [],
+      fusionCards: [],
 
       // Actions
       setPremiumUser: (isPremium) => set({ isPremiumUser: isPremium }),
@@ -243,7 +255,19 @@ export const useAppStore = create<AppState>()(
           }
         ];
 
-        set({ chapters, characters, deletedScenes });
+        const fusionCards: FusionCard[] = [
+          {
+            id: 'lyra-kael-bond',
+            title: 'Lyra + Kael',
+            characters: ['lyra', 'kael'],
+            tagline: 'Two Souls, One Destiny - Reborn in Love',
+            description: 'The cosmic bond between Zahra and Auron transcends time and space. Their connection burns with the fire of creation itself, intertwining their destinies across the stars.',
+            imageUrl: 'https://images.composerapi.com/0BD48D40-CBBB-44B9-899D-B0EDFAF730DB.jpg',
+            type: 'bond'
+          }
+        ];
+
+        set({ chapters, characters, deletedScenes, fusionCards });
       }
     }),
     {

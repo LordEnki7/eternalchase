@@ -16,7 +16,7 @@ type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 export default function CharacterUniverseScreen() {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation<NavigationProp>();
-  const { characters } = useAppStore();
+  const { characters, fusionCards } = useAppStore();
 
   const handleCharacterPress = (characterId: string) => {
     navigation.navigate('CharacterDetail', { characterId });
@@ -227,10 +227,57 @@ export default function CharacterUniverseScreen() {
           </View>
         </LinearGradient>
 
+        {/* Fusion Cards Section */}
+        {fusionCards.length > 0 && (
+          <View className="px-6 py-6">
+            <Text className="text-white text-2xl font-bold mb-6">
+              Cosmic Bonds
+            </Text>
+            
+            {fusionCards.map((fusion) => (
+              <Pressable key={fusion.id} className="mb-6">
+                <View className="bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-500/30 rounded-2xl p-1">
+                  <View className="bg-gray-900 rounded-2xl overflow-hidden">
+                    {/* Fusion Card Image */}
+                    <View className="h-96 relative">
+                      <Image
+                        source={{ uri: fusion.imageUrl }}
+                        style={{ width: '100%', height: '100%' }}
+                        contentFit="cover"
+                      />
+                      
+                      {/* Overlay with fusion info */}
+                      <LinearGradient
+                        colors={['transparent', 'rgba(0,0,0,0.9)']}
+                        start={{ x: 0, y: 0 }}
+                        end={{ x: 0, y: 1 }}
+                        className="absolute bottom-0 left-0 right-0 p-6"
+                      >
+                        <Text className="text-amber-500 text-sm font-bold mb-1 tracking-wide">
+                          FUSION CARD
+                        </Text>
+                        <Text className="text-white text-2xl font-bold mb-2">
+                          {fusion.title}
+                        </Text>
+                        <Text className="text-amber-400 text-lg font-semibold mb-3 leading-6">
+                          {fusion.tagline}
+                        </Text>
+                        <Text className="text-gray-300 text-base leading-6">
+                          {fusion.description}
+                        </Text>
+                      </LinearGradient>
+                    </View>
+                  </View>
+                </View>
+              </Pressable>
+            ))}
+          </View>
+        )}
+
         {/* Main Characters */}
         <View className="px-6 py-6">
           <Text className="text-white text-2xl font-bold mb-6">
-            Main Characters
+            Individual Profiles
           </Text>
           {characters.filter(char => char.id !== 'source').map((character, index) => (
             <CharacterCard key={character.id} character={character} index={index} />
