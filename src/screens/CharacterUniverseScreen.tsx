@@ -8,6 +8,9 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { useAppStore } from '../state/app-store';
+import AnimatedCharacterCard from '../components/AnimatedCharacterCard';
+import EnhancedFusionCard from '../components/EnhancedFusionCard';
+import CharacterRelationshipWeb from '../components/CharacterRelationshipWeb';
 
 
 const { width } = Dimensions.get('window');
@@ -18,6 +21,8 @@ export default function CharacterUniverseScreen() {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation<NavigationProp>();
   const { characters, fusionCards } = useAppStore();
+  const [viewMode, setViewMode] = useState<'cards' | 'web'>('cards');
+  const [selectedCharacter, setSelectedCharacter] = useState<string | undefined>();
 
 
   const handleCharacterPress = (characterId: string) => {
@@ -240,41 +245,7 @@ export default function CharacterUniverseScreen() {
             </Text>
             
             {fusionCards.map((fusion) => (
-              <Pressable key={fusion.id} className="mb-6">
-                <View className="bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-500/30 rounded-2xl p-1">
-                  <View className="bg-gray-900 rounded-2xl overflow-hidden">
-                    {/* Fusion Card Image */}
-                    <View className="h-96 relative">
-                      <Image
-                        source={{ uri: fusion.imageUrl }}
-                        style={{ width: '100%', height: '100%' }}
-                        contentFit="cover"
-                      />
-                      
-                      {/* Overlay with fusion info */}
-                      <LinearGradient
-                        colors={['transparent', 'rgba(0,0,0,0.9)']}
-                        start={{ x: 0, y: 0 }}
-                        end={{ x: 0, y: 1 }}
-                        className="absolute bottom-0 left-0 right-0 p-6"
-                      >
-                        <Text className="text-amber-500 text-sm font-bold mb-1 tracking-wide">
-                          FUSION CARD
-                        </Text>
-                        <Text className="text-white text-2xl font-bold mb-2">
-                          {fusion.title}
-                        </Text>
-                        <Text className="text-amber-400 text-lg font-semibold mb-3 leading-6">
-                          {fusion.tagline}
-                        </Text>
-                        <Text className="text-gray-300 text-base leading-6">
-                          {fusion.description}
-                        </Text>
-                      </LinearGradient>
-                    </View>
-                  </View>
-                </View>
-              </Pressable>
+              <EnhancedFusionCard key={fusion.id} fusion={fusion} />
             ))}
           </View>
         )}
@@ -285,7 +256,12 @@ export default function CharacterUniverseScreen() {
             Individual Profiles
           </Text>
           {characters.filter(char => char.id !== 'source').map((character, index) => (
-            <CharacterCard key={character.id} character={character} index={index} />
+            <AnimatedCharacterCard 
+              key={character.id} 
+              character={character} 
+              index={index}
+              delay={index * 200}
+            />
           ))}
         </View>
 

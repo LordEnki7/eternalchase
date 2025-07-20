@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { useAppStore } from '../state/app-store';
+import EnhancedChapterCard from '../components/EnhancedChapterCard';
 
 const { width } = Dimensions.get('window');
 
@@ -190,10 +191,19 @@ export default function ChapterGuideScreen() {
           </LinearGradient>
         </View>
 
-        {/* Chapters List */}
+        {/* Enhanced Chapters List */}
         <View className="px-6">
           {filteredChapters.map((chapter, index) => (
-            <ChapterCard key={chapter.id} chapter={chapter} index={index} />
+            <EnhancedChapterCard 
+              key={chapter.id} 
+              chapter={chapter} 
+              index={index}
+              bookNumber={selectedBook}
+              onPress={() => handleChapterPress(chapter.id)}
+              onPlayPress={() => togglePlayback(chapter.id)}
+              isCurrentChapter={currentChapter === chapter.id}
+              isPlaying={currentChapter === chapter.id && isPlaying}
+            />
           ))}
         </View>
 
