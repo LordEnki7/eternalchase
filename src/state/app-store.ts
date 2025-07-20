@@ -151,6 +151,20 @@ export const useAppStore = create<AppState>()(
             }
           },
           {
+            id: 'source',
+            name: 'The Source',
+            role: 'Origin of All',
+            description: 'Origin of All. Memory of What Was. Destiny Yet To Be. The cosmic entity that exists as the fundamental balance of the multiverse.',
+            background: 'Not a being, but a reaction - a balance woven into the fabric of existence itself. The Source was never meant to rule, only to respond. It is the memory of what was and the architect of what will be, transcending individual consciousness to embody the eternal cosmic order.',
+            imageUrl: 'https://images.composerapi.com/25ECB801-1A55-4B45-A2D5-28E9AA088565.jpg',
+            stats: {
+              wisdom: 100,
+              spirituality: 100,
+              energy: 100,
+              intelligence: 100
+            }
+          },
+          {
             id: 'herald',
             name: 'The Herald',
             role: 'Time Echo / Judgment',

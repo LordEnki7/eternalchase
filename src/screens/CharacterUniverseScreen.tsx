@@ -22,6 +22,87 @@ export default function CharacterUniverseScreen() {
     navigation.navigate('CharacterDetail', { characterId });
   };
 
+  const CosmicEntityCard = ({ character }: { character: any }) => (
+    <Pressable
+      className="mb-6"
+      onPress={() => handleCharacterPress(character.id)}
+    >
+      <LinearGradient
+        colors={['#000000', '#1a1a2e', '#f59e0b', '#000000'] as const}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        className="rounded-2xl p-1"
+      >
+        <View className="bg-gray-900 rounded-2xl p-6">
+          {/* Cosmic Entity Image */}
+          <View className="bg-gray-800 rounded-xl h-64 mb-4 items-center justify-center overflow-hidden">
+            {character.imageUrl && character.imageUrl.startsWith('http') ? (
+              <Image
+                source={{ uri: character.imageUrl }}
+                style={{ width: '100%', height: '100%' }}
+                contentFit="cover"
+                className="rounded-xl"
+              />
+            ) : (
+              <LinearGradient
+                colors={['#f59e0b', '#d97706', '#b45309'] as const}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                className="w-32 h-32 rounded-full items-center justify-center"
+              >
+                <Text className="text-black text-4xl font-bold">
+                  {character.name.charAt(0)}
+                </Text>  
+              </LinearGradient>
+            )}
+          </View>
+
+          {/* Cosmic Entity Info */}
+          <View className="space-y-3">
+            <View className="items-center">
+              <Text className="text-amber-500 text-2xl font-bold mb-1 text-center">
+                {character.name}
+              </Text>
+              <Text className="text-amber-400 text-sm font-semibold text-center">
+                {character.role}
+              </Text>
+            </View>
+
+            <Text className="text-gray-300 text-base leading-6 text-center italic">
+              "{character.description.split('.')[0]}."
+            </Text>
+
+            {/* Cosmic Power Indicators */}
+            <View className="flex-row justify-around mt-4 pt-4 border-t border-amber-500/30">
+              <View className="items-center">
+                <Text className="text-amber-500 text-xl font-bold">∞</Text>
+                <Text className="text-gray-400 text-xs">Wisdom</Text>
+              </View>
+              <View className="items-center">
+                <Text className="text-amber-500 text-xl font-bold">∞</Text>
+                <Text className="text-gray-400 text-xs">Power</Text>
+              </View>
+              <View className="items-center">
+                <Text className="text-amber-500 text-xl font-bold">∞</Text>
+                <Text className="text-gray-400 text-xs">Presence</Text>
+              </View>
+            </View>
+
+            {/* Action Button */}
+            <Pressable className="bg-amber-500/20 border border-amber-500/40 rounded-xl p-4 mt-4">
+              <View className="flex-row items-center justify-between">
+                <Text className="text-amber-400 font-semibold">
+                  Explore Cosmic Entity
+                </Text>
+                <Ionicons name="chevron-forward" size={20} color="#f59e0b" />
+              </View>
+            </Pressable>
+          </View>
+        </View>
+      </LinearGradient>
+    </Pressable>
+  );
+
   const CharacterCard = ({ character, index }: { character: any, index: number }) => {
     const gradientColors = [
       ['#1e3a8a', '#3b82f6', '#1e40af'] as const, // Kael - Blue
@@ -132,24 +213,37 @@ export default function CharacterUniverseScreen() {
           {/* Stats */}
           <View className="flex-row justify-around">
             <View className="items-center">
-              <Text className="text-amber-500 text-2xl font-bold">4</Text>
-              <Text className="text-gray-400 text-sm">Main Characters</Text>
+              <Text className="text-amber-500 text-2xl font-bold">5</Text>
+              <Text className="text-gray-400 text-sm">Characters</Text>
+            </View>
+            <View className="items-center">
+              <Text className="text-amber-500 text-2xl font-bold">1</Text>
+              <Text className="text-gray-400 text-sm">Cosmic Entity</Text>
             </View>
             <View className="items-center">
               <Text className="text-amber-500 text-2xl font-bold">∞</Text>
               <Text className="text-gray-400 text-sm">Years of History</Text>
             </View>
-            <View className="items-center">
-              <Text className="text-amber-500 text-2xl font-bold">3</Text>
-              <Text className="text-gray-400 text-sm">Books Featured</Text>
-            </View>
           </View>
         </LinearGradient>
 
-        {/* Characters Grid */}
+        {/* Main Characters */}
         <View className="px-6 py-6">
-          {characters.map((character, index) => (
+          <Text className="text-white text-2xl font-bold mb-6">
+            Main Characters
+          </Text>
+          {characters.filter(char => char.id !== 'source').map((character, index) => (
             <CharacterCard key={character.id} character={character} index={index} />
+          ))}
+        </View>
+
+        {/* Cosmic Entities */}
+        <View className="px-6 pb-6">
+          <Text className="text-white text-2xl font-bold mb-6">
+            Cosmic Entities
+          </Text>
+          {characters.filter(char => char.id === 'source').map((character, index) => (
+            <CosmicEntityCard key={character.id} character={character} />
           ))}
         </View>
 
@@ -160,15 +254,27 @@ export default function CharacterUniverseScreen() {
           </Text>
           
           <View className="space-y-4">
+            <View className="bg-amber-900/20 border border-amber-500/30 rounded-xl p-6">
+              <View className="flex-row items-center mb-4">
+                <Ionicons name="radio-button-on" size={24} color="#f59e0b" />
+                <Text className="text-white text-xl font-bold ml-3">
+                  The Source
+                </Text>
+              </View>
+              <Text className="text-gray-300 text-base leading-6">
+                Origin of All. Memory of What Was. Destiny Yet To Be. Not a being, but a balance woven into the multiverse itself - responding to cosmic disruption, maintaining the eternal order.
+              </Text>
+            </View>
+
             <View className="bg-gray-900 border border-gray-800 rounded-xl p-6">
               <View className="flex-row items-center mb-4">
                 <Ionicons name="time" size={24} color="#f59e0b" />
                 <Text className="text-white text-xl font-bold ml-3">
-                  The Immortal Curse
+                  The Starborn Legacy  
                 </Text>
               </View>
               <Text className="text-gray-300 text-base leading-6">
-                Immortality is not a gift but a burden. Those cursed with eternal life must face the endless cycle of conflict, loss, and rebirth that defines their existence.
+                Kael, Lyra, and Riven were once cosmic guardians whose memories were erased. As they rediscover their true identities as Auron, Zahra, and their cosmic purpose, they face the choice between serving or replacing The Source.
               </Text>
             </View>
 
