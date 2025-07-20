@@ -132,9 +132,15 @@ export const useAppStore = create<AppState>()(
             id: 'lyra',
             name: 'Lyra',
             role: 'Starborne Seeker',
-            description: 'A mysterious island dweller who discovers she is the last key to an ancient weapon, descended from the cosmic Worldweavers.',
-            background: 'Living on Isla Noctis with her grandmother, Lyra awakens to her true heritage as Zahra (Solis), one of the Aethari bloodline. Her power can either heal or destroy, making her both salvation and target. With Intellect 9, Heart 10, Combat 7, and Cosmic Bond 9, she represents the perfect balance of wisdom, compassion, and power.',
-            imageUrl: 'https://images.composerapi.com/267A1AC7-5700-471D-A4C3-0F1694F0FCBD.jpg'
+            description: 'A mysterious island dweller who awakens to her cosmic heritage, wielding both blade and heart in perfect balance.',
+            background: 'Living on Isla Noctis with her grandmother, Lyra awakens to her true heritage as Zahra (Solis), one of the Aethari bloodline. Her power can either heal or destroy, making her both salvation and target. With maximum Heart rating and powerful Cosmic Bond, she represents the perfect balance of wisdom, compassion, and power.',
+            imageUrl: 'https://images.composerapi.com/DEC12D9F-05CD-4A41-ABDE-9EB2B6F15744.jpg',
+            stats: {
+              intelligence: 90,
+              love: 100,
+              combat: 70,
+              spirituality: 90
+            }
           },
           {
             id: 'riven',
