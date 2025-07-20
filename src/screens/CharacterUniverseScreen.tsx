@@ -131,13 +131,12 @@ export default function CharacterUniverseScreen() {
         >
           <View className="bg-gray-900 rounded-2xl p-6">
             {/* Character Image */}
-            <View className="bg-gray-800 rounded-xl mb-4 overflow-hidden justify-start" style={{ height: 600 }}>
+            <View className="bg-gray-800 rounded-xl mb-4 overflow-hidden" style={{ height: 480, width: '100%' }}>
               {character.imageUrl && character.imageUrl.startsWith('http') ? (
                 <Image
                   source={{ uri: character.imageUrl }}
-                  style={{ width: '100%', height: '120%', marginTop: -20 }}
-                  contentFit="cover"
-                  contentPosition="top center"
+                  style={{ width: '100%', height: '100%' }}
+                  contentFit="fill"
                   className="rounded-xl"
                 />
               ) : (
