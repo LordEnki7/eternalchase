@@ -149,6 +149,22 @@ export const useAppStore = create<AppState>()(
               love: 92,
               energy: 85
             }
+          },
+          {
+            id: 'herald',
+            name: 'The Herald',
+            role: 'Time Echo / Judgment',
+            description: 'First to fall, last to forget. A mysterious cosmic entity who appears to deliver warnings and prophecies from the Divine Source.',
+            background: 'The Herald of the Source emerges from dimensional rifts to deliver cosmic judgment and warnings. Cloaked in time itself, this enigmatic figure carries the weight of forgotten futures and the echoes of choices yet unmade. Neither fully divine nor mortal, The Herald exists between moments, watching the eternal dance of fate unfold.',
+            imageUrl: 'https://images.composerapi.com/BFA76FD8-7BC9-4C83-BF7B-8181C5643021.jpg',
+            stats: {
+              energy: 85,
+              intelligence: 96,
+              combat: 78,
+              love: 45,
+              wisdom: 99,
+              spirituality: 94
+            }
           }
         ];
 
