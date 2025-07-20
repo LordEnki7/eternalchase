@@ -25,6 +25,10 @@ interface Character {
     love?: number;
     wisdom?: number;
     spirituality?: number;
+    manipulation?: number;
+    corruption?: number;
+    psychic_power?: number;
+    shadow_energy?: number;
   };
 }
 
@@ -148,6 +152,20 @@ export const useAppStore = create<AppState>()(
               spirituality: 95,
               love: 92,
               energy: 85
+            }
+          },
+          {
+            id: 'velo_entity',
+            name: 'The Velo Entity',
+            role: 'Cosmic Antagonist',
+            description: 'The shadow that feasts on love and betrayal. A malevolent force that feeds on the strongest emotions and deepest connections.',
+            background: 'Born from the darkest corners of the cosmos, the Velo Entity represents the corruption of love itself. It seeks out the bonds between the Starborn, feeding on their connections and growing stronger with each betrayal it orchestrates. Its very presence warps reality and turns devotion into destruction.',
+            imageUrl: 'https://images.composerapi.com/1E78A878-35AE-4150-9136-E192C1B054F1.jpg',
+            stats: {
+              manipulation: 99,
+              corruption: 95,
+              psychic_power: 92,
+              shadow_energy: 98
             }
           },
           {

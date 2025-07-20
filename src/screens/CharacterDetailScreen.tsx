@@ -64,23 +64,33 @@ export default function CharacterDetailScreen() {
   const relationships = {
     kael: [
       { with: 'Lyra', type: 'Destined Allies', description: 'Bound by prophecy and shared purpose' },
-      { with: 'Magnus', type: 'Eternal Enemies', description: 'Locked in an endless cycle of conflict' },
-      { with: 'Vera', type: 'Inspired by', description: 'Her mortality gives him hope' }
+      { with: 'Riven', type: 'Complex Trust', description: 'Former allies with a complicated past' },
+      { with: 'Velo Entity', type: 'Mortal Enemy', description: 'The shadow seeks to corrupt his love for Lyra' }
     ],
     lyra: [
       { with: 'Kael', type: 'Fated Connection', description: 'Their destinies are intertwined across time' },
-      { with: 'Magnus', type: 'Ancient Betrayal', description: 'Once allies, now bitter enemies' },
-      { with: 'Vera', type: 'Reluctant Respect', description: 'Admires her strength despite mortality' }
+      { with: 'Grandma Ama', type: 'Protective Bond', description: 'Her grandmother\'s wisdom guides her path' },
+      { with: 'Velo Entity', type: 'Target of Corruption', description: 'The entity feeds on her powerful emotions' }
     ],
-    magnus: [
-      { with: 'Kael', type: 'Corrupted Reflection', description: 'What Kael could become without hope' },
-      { with: 'Lyra', type: 'Lost Love', description: 'His corruption cost him everything' },
-      { with: 'Vera', type: 'Dismissive Contempt', description: 'Views her mortality as weakness' }
+    riven: [
+      { with: 'Kael', type: 'Redemptive Alliance', description: 'Seeking to make amends for past betrayals' },
+      { with: 'Lyra', type: 'Protective Guardian', description: 'Defends her from the Veil\'s pursuit' },
+      { with: 'Velo Entity', type: 'Ancient Knowledge', description: 'Understands the entity\'s true nature' }
     ],
-    vera: [
-      { with: 'Kael', type: 'Mutual Inspiration', description: 'They give each other reasons to fight' },
-      { with: 'Lyra', type: 'Cautious Alliance', description: 'Trust built through shared trials' },
-      { with: 'Magnus', type: 'Defiant Opposition', description: 'Refuses to be intimidated by his power' }
+    maya: [
+      { with: 'Kael', type: 'Divine Guidance', description: 'Watches over his cosmic awakening' },
+      { with: 'Lyra', type: 'Hidden Protector', description: 'Shields her from forces beyond understanding' },
+      { with: 'Velo Entity', type: 'Opposing Force', description: 'Stands against the shadow\'s influence' }
+    ],
+    grandma: [
+      { with: 'Lyra', type: 'Sacrificial Love', description: 'Gave everything to protect her granddaughter' },
+      { with: 'The Starborn', type: 'Divine Keeper', description: 'Once held the keys to their cosmic bonds' },
+      { with: 'Velo Entity', type: 'Ancient Ward', description: 'Her sacrifice weakened the entity\'s hold' }
+    ],
+    velo_entity: [
+      { with: 'Kael & Lyra', type: 'Parasitic Hunger', description: 'Feeds on their love and seeks to corrupt their bond' },
+      { with: 'The Starborn', type: 'Cosmic Predator', description: 'Hunts those with the strongest emotional connections' },
+      { with: 'The Divine Source', type: 'Antithesis', description: 'Represents the corruption of all that is sacred' }
     ]
   };
 
@@ -261,6 +271,66 @@ export default function CharacterDetailScreen() {
                             <View 
                               className="bg-gradient-to-r from-amber-500 to-amber-400 rounded-full h-3" 
                               style={{ width: `${character.stats.spirituality}%` }}
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    )}
+                    
+                    {character.stats.manipulation && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Manipulation</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-red-400 text-xl font-bold mr-2">{character.stats.manipulation}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-red-600 to-red-500 rounded-full h-3" 
+                              style={{ width: `${character.stats.manipulation}%` }}
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    )}
+                    
+                    {character.stats.corruption && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Corruption</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-purple-400 text-xl font-bold mr-2">{character.stats.corruption}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-purple-600 to-purple-500 rounded-full h-3" 
+                              style={{ width: `${character.stats.corruption}%` }}
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    )}
+                    
+                    {character.stats.psychic_power && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Psychic Power</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-violet-400 text-xl font-bold mr-2">{character.stats.psychic_power}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-violet-600 to-violet-500 rounded-full h-3" 
+                              style={{ width: `${character.stats.psychic_power}%` }}
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    )}
+                    
+                    {character.stats.shadow_energy && (
+                      <View className="flex-row items-center justify-between">
+                        <Text className="text-gray-300 text-lg uppercase tracking-wide font-semibold">Shadow Energy</Text>
+                        <View className="flex-row items-center">
+                          <Text className="text-rose-400 text-xl font-bold mr-2">{character.stats.shadow_energy}</Text>
+                          <View className="bg-gray-700 rounded-full h-3 w-24">
+                            <View 
+                              className="bg-gradient-to-r from-rose-600 to-rose-500 rounded-full h-3" 
+                              style={{ width: `${character.stats.shadow_energy}%` }}
                             />
                           </View>
                         </View>
