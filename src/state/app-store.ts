@@ -274,6 +274,30 @@ export const useAppStore = create<AppState>()(
             chapterRelated: 'The Union Forbidden',
             content: 'This deleted scene shows Astrael\'s internal conflict as he prepares to hunt his former brother-in-arms, revealing their shared history and his doubt about the Source\'s judgment...',
             isPremium: true
+          },
+          {
+            id: 'ds6',
+            title: 'The Weaver\'s True Form',
+            description: 'Extended scene revealing The Weaver\'s connection to the cosmic threads.',
+            chapterRelated: 'Fractured Light',
+            content: 'This scene shows The Weaver\'s full ethereal form and explains how they manipulate the threads of time and space, revealing their ancient role as guardians of reality\'s fabric...',
+            isPremium: true
+          },
+          {
+            id: 'ds7',
+            title: 'Lyra\'s Storm Unleashed',
+            description: 'Alternate version of the massive fireball scene with extended dialogue.',
+            chapterRelated: 'Inferno and Reflection',
+            content: 'In this extended version, Lyra\'s internal monologue during the fireball creation reveals her struggle with the storm within and her fear of losing control completely...',
+            isPremium: false
+          },
+          {
+            id: 'ds8',
+            title: 'The Source\'s Consciousness Speaks',
+            description: 'Extended philosophical dialogue with the Source\'s core entity.',
+            chapterRelated: 'The Heart of the Source',
+            content: 'A longer conversation where the Source questions its own existence and reveals doubts about the Choir\'s interpretation of its purpose, showing its trapped, uncertain nature...',
+            isPremium: true
           }
         ];
 

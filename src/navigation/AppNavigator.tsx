@@ -12,6 +12,7 @@ import ChapterDetailScreen from '../screens/ChapterDetailScreen';
 import CharacterDetailScreen from '../screens/CharacterDetailScreen';
 import BehindScenesScreen from '../screens/BehindScenesScreen';
 import FutureFilmsScreen from '../screens/FutureFilmsScreen';
+import PuzzleScreen from '../screens/PuzzleScreen';
 import TimelineScreen from '../screens/TimelineScreen';
 import MysteriesScreen from '../screens/MysteriesScreen';
 
@@ -22,6 +23,7 @@ export type RootStackParamList = {
   BehindScenes: undefined;
   FutureFilms: undefined;
   Mysteries: undefined;
+  Puzzle: undefined;
 };
 
 export type TabParamList = {
@@ -159,6 +161,22 @@ export default function AppNavigator() {
         options={{
           headerShown: true,
           headerTitle: 'Decode the Source',
+          headerStyle: {
+            backgroundColor: '#000000',
+          },
+          headerTintColor: '#f59e0b',
+          headerBackVisible: true,
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+      <Stack.Screen 
+        name="Puzzle" 
+        component={PuzzleScreen}
+        options={{
+          headerShown: true,
+          headerTitle: 'Shadows of the Source',
           headerStyle: {
             backgroundColor: '#000000',
           },
