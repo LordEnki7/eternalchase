@@ -1,0 +1,22 @@
+{
+  "id": "book3",
+  "title": "Dawn of Reckoning", 
+  "subtitle": "Book Three of the Eternal Chase Trilogy",
+  "description": "The final confrontation approaches as all threads of destiny converge. Kael must choose between eternal existence and ultimate sacrifice, while the fate of both mortal and immortal worlds hangs in the balance.",
+  "bookNumber": 3,
+  "publishDate": "2023-10-12",
+  "isbn": "978-0-123456-80-2",
+  "pages": 415,
+  "wordCount": 102800,
+  "genre": ["Fantasy", "Dark Fantasy", "Urban Fantasy", "Epic Fantasy"],
+  "themes": ["Destiny", "Sacrifice", "Redemption", "Legacy"],
+  "coverImageUrl": "images/covers/book3-cover.jpg",
+  "chapters": [
+    "b3c1",
+    "b3c2",
+    "b3c3",
+    "b3c4",
+    "b3c5",
+    "b3c6"
+  ]
+}

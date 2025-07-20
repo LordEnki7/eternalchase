@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-20T00:00:00Z",
+  "books": [
+    "book1.json",
+    "book2.json", 
+    "book3.json"
+  ],
+  "characters": [
+    "kael.json",
+    "lyra.json",
+    "magnus.json",
+    "vera.json"
+  ],
+  "deletedScenes": [
+    "scene1.json",
+    "scene2.json",
+    "scene3.json"
+  ],
+  "metadata": "series-metadata.json",
+  "assets": {
+    "audio": [
+      "audio/chapter-themes/",
+      "audio/soundtrack/"
+    ],
+    "images": [
+      "images/characters/",
+      "images/covers/",
+      "images/scenes/"
+    ],
+    "videos": [
+      "videos/behind-scenes/",
+      "videos/trailers/"
+    ]
+  }
+}
