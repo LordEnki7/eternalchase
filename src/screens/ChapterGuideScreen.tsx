@@ -40,8 +40,13 @@ export default function ChapterGuideScreen() {
   const togglePlayback = (chapterId: string) => {
     if (currentChapter === chapterId && isPlaying) {
       setPlaying(false);
+      console.log('Paused audio for chapter:', chapterId);
     } else {
+      setCurrentChapter(chapterId);
       setPlaying(true);
+      console.log('Playing audio for chapter:', chapterId);
+      // For now, just simulate audio playback
+      // In a real app, you'd integrate with expo-av here
     }
   };
 
