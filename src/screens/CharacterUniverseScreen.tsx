@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Pressable, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -41,18 +42,27 @@ export default function CharacterUniverseScreen() {
           className="rounded-2xl p-1"
         >
           <View className="bg-gray-900 rounded-2xl p-6">
-            {/* Character Image Placeholder */}
-            <View className="bg-gray-800 rounded-xl h-48 mb-4 items-center justify-center">
-              <LinearGradient
-                colors={gradientColors[index % gradientColors.length]}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-                className="w-24 h-24 rounded-full items-center justify-center"
-              >
-                <Text className="text-white text-3xl font-bold">
-                  {character.name.charAt(0)}
-                </Text>
-              </LinearGradient>
+            {/* Character Image */}
+            <View className="bg-gray-800 rounded-xl h-48 mb-4 items-center justify-center overflow-hidden">
+              {character.imageUrl && character.imageUrl.startsWith('http') ? (
+                <Image
+                  source={{ uri: character.imageUrl }}
+                  style={{ width: '100%', height: '100%' }}
+                  contentFit="cover"
+                  className="rounded-xl"
+                />
+              ) : (
+                <LinearGradient
+                  colors={gradientColors[index % gradientColors.length]}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  className="w-24 h-24 rounded-full items-center justify-center"
+                >
+                  <Text className="text-white text-3xl font-bold">
+                    {character.name.charAt(0)}
+                  </Text>  
+                </LinearGradient>
+              )}
             </View>
 
             {/* Character Info */}

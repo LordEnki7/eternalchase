@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, ScrollView, Pressable } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '../navigation/AppNavigator';
@@ -113,10 +114,20 @@ export default function CharacterDetailScreen() {
         >
           {/* Character Avatar */}
           <View className="items-center mb-6">
-            <View className="bg-white/20 rounded-full w-32 h-32 items-center justify-center mb-4">
-              <Text className="text-white text-5xl font-bold">
-                {character.name.charAt(0)}
-              </Text>
+            <View className="w-32 h-32 mb-4 overflow-hidden rounded-full border-4 border-white/20">
+              {character.imageUrl && character.imageUrl.startsWith('http') ? (
+                <Image
+                  source={{ uri: character.imageUrl }}
+                  style={{ width: '100%', height: '100%' }}
+                  contentFit="cover"
+                />
+              ) : (
+                <View className="bg-white/20 w-full h-full items-center justify-center">
+                  <Text className="text-white text-5xl font-bold">
+                    {character.name.charAt(0)}
+                  </Text>
+                </View>
+              )}
             </View>
             <Text className="text-white text-3xl font-bold text-center mb-2">
               {character.name}

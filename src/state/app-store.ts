@@ -124,11 +124,11 @@ export const useAppStore = create<AppState>()(
           },
           {
             id: 'grandma',
-            name: 'Grandma (Former Keyholder)',
-            role: 'The Hidden Protector',
-            description: 'Lyra\'s grandmother who hides a profound secret - she was once a member of the Divine Source\'s Inner Choir.',
-            background: 'A former Keyholder with the power to lock and unlock Starborn bonds, she helped separate the trio to protect the cosmos, sacrificing herself to give them a chance at redemption.',
-            imageUrl: 'grandma-profile.jpg'
+            name: 'Grandma Ama',
+            role: 'Spirit Flame / Wisdom',
+            description: 'Lyra\'s grandmother who hides a profound secret - she was once a member of the Divine Source\'s Inner Choir and a Keyholder.',
+            background: 'She burned for truth, and lit the path behind her. A former Keyholder with the power to lock and unlock Starborn bonds, Grandma Ama helped separate the trio to protect the cosmos, ultimately sacrificing herself to give them a chance at redemption.',
+            imageUrl: 'https://images.composerapi.com/E79CDFBE-179E-43D5-96BD-DDEAF9CBDC42.jpg'
           }
         ];
 
