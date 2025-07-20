@@ -175,37 +175,89 @@ export default function CharacterDetailScreen() {
                   Character Attributes
                 </Text>
                 
-                <View className="space-y-4">
-                  <View>
-                    <View className="flex-row justify-between mb-2">
-                      <Text className="text-gray-300">Power Level</Text>
-                      <Text className="text-amber-500">Immortal</Text>
+                {character.id === 'lyra' ? (
+                  // Special stats for Lyra based on her card
+                  <View className="space-y-4">
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-gray-300 text-lg">Intellect</Text>
+                      <View className="flex-row items-center">
+                        <Text className="text-amber-500 text-2xl font-bold mr-2">9</Text>
+                        <View className="bg-gray-700 rounded-full h-3 w-20">
+                          <View className="bg-amber-500 rounded-full h-3" style={{ width: '90%' }} />
+                        </View>
+                      </View>
                     </View>
-                    <View className="bg-gray-700 rounded-full h-2">
-                      <View className="bg-amber-500 rounded-full h-2 w-5/6" />
+                    
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-gray-300 text-lg">Heart</Text>
+                      <View className="flex-row items-center">
+                        <Text className="text-red-400 text-2xl font-bold mr-2">10</Text>
+                        <View className="bg-gray-700 rounded-full h-3 w-20">
+                          <View className="bg-red-400 rounded-full h-3 w-full" />
+                        </View>
+                      </View>
+                    </View>
+                    
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-gray-300 text-lg">Combat</Text>
+                      <View className="flex-row items-center">
+                        <Text className="text-blue-400 text-2xl font-bold mr-2">7</Text>
+                        <View className="bg-gray-700 rounded-full h-3 w-20">
+                          <View className="bg-blue-400 rounded-full h-3" style={{ width: '70%' }} />
+                        </View>
+                      </View>
+                    </View>
+                    
+                    <View className="flex-row items-center justify-between">
+                      <Text className="text-gray-300 text-lg">Cosmic Bond</Text>
+                      <View className="flex-row items-center">
+                        <Text className="text-purple-400 text-2xl font-bold mr-2">9</Text>
+                        <View className="bg-gray-700 rounded-full h-3 w-20">
+                          <View className="bg-purple-400 rounded-full h-3" style={{ width: '90%' }} />
+                        </View>
+                      </View>
+                    </View>
+                    
+                    <View className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3 mt-4">
+                      <Text className="text-amber-400 text-sm font-semibold text-center">
+                        💫 Maximum Heart Rating: The Perfect Balance of Power & Compassion
+                      </Text>
                     </View>
                   </View>
-                  
-                  <View>
-                    <View className="flex-row justify-between mb-2">
-                      <Text className="text-gray-300">Wisdom</Text>
-                      <Text className="text-amber-500">Ancient</Text>
+                ) : (
+                  // Default stats for other characters
+                  <View className="space-y-4">
+                    <View>
+                      <View className="flex-row justify-between mb-2">
+                        <Text className="text-gray-300">Power Level</Text>
+                        <Text className="text-amber-500">Immortal</Text>
+                      </View>
+                      <View className="bg-gray-700 rounded-full h-2">
+                        <View className="bg-amber-500 rounded-full h-2 w-5/6" />
+                      </View>
                     </View>
-                    <View className="bg-gray-700 rounded-full h-2">
-                      <View className="bg-amber-500 rounded-full h-2 w-4/5" />
+                    
+                    <View>
+                      <View className="flex-row justify-between mb-2">
+                        <Text className="text-gray-300">Wisdom</Text>
+                        <Text className="text-amber-500">Ancient</Text>
+                      </View>
+                      <View className="bg-gray-700 rounded-full h-2">
+                        <View className="bg-amber-500 rounded-full h-2 w-4/5" />
+                      </View>
+                    </View>
+                    
+                    <View>
+                      <View className="flex-row justify-between mb-2">
+                        <Text className="text-gray-300">Influence</Text>
+                        <Text className="text-amber-500">Legendary</Text>
+                      </View>
+                      <View className="bg-gray-700 rounded-full h-2">
+                        <View className="bg-amber-500 rounded-full h-2 w-3/4" />
+                      </View>
                     </View>
                   </View>
-                  
-                  <View>
-                    <View className="flex-row justify-between mb-2">
-                      <Text className="text-gray-300">Influence</Text>
-                      <Text className="text-amber-500">Legendary</Text>
-                    </View>
-                    <View className="bg-gray-700 rounded-full h-2">
-                      <View className="bg-amber-500 rounded-full h-2 w-3/4" />
-                    </View>
-                  </View>
-                </View>
+                )}
               </View>
             </View>
           )}

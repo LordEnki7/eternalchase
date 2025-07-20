@@ -100,11 +100,11 @@ export const useAppStore = create<AppState>()(
           },
           {
             id: 'lyra',
-            name: 'Lyra (Zahra/Solis)',
-            role: 'The Aethari Descendant',
+            name: 'Lyra',
+            role: 'Starborne Seeker',
             description: 'A mysterious island dweller who discovers she is the last key to an ancient weapon, descended from the cosmic Worldweavers.',
-            background: 'Living on Isla Noctis with her grandmother, Lyra awakens to her true heritage as Zahra (Solis), one of the Aethari bloodline. Her power can either heal or destroy, making her both salvation and target.',
-            imageUrl: 'lyra-profile.jpg'
+            background: 'Living on Isla Noctis with her grandmother, Lyra awakens to her true heritage as Zahra (Solis), one of the Aethari bloodline. Her power can either heal or destroy, making her both salvation and target. With Intellect 9, Heart 10, Combat 7, and Cosmic Bond 9, she represents the perfect balance of wisdom, compassion, and power.',
+            imageUrl: 'https://images.composerapi.com/267A1AC7-5700-471D-A4C3-0F1694F0FCBD.jpg'
           },
           {
             id: 'riven',
