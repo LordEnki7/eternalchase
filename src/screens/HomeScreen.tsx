@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { useAppStore } from '../state/app-store';
+import ParticleField from '../components/ParticleField';
 
 const { width, height } = Dimensions.get('window');
 
@@ -39,6 +40,9 @@ export default function HomeScreen() {
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
         />
+        
+        {/* Particle Effects */}
+        <ParticleField count={80} color="#f59e0b" opacity={0.4} />
         
         {/* Overlay Content */}
         <View 

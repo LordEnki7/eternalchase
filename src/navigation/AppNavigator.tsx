@@ -12,6 +12,7 @@ import ChapterDetailScreen from '../screens/ChapterDetailScreen';
 import CharacterDetailScreen from '../screens/CharacterDetailScreen';
 import BehindScenesScreen from '../screens/BehindScenesScreen';
 import FutureFilmsScreen from '../screens/FutureFilmsScreen';
+import TimelineScreen from '../screens/TimelineScreen';
 import MysteriesScreen from '../screens/MysteriesScreen';
 
 export type RootStackParamList = {
@@ -25,7 +26,7 @@ export type RootStackParamList = {
 
 export type TabParamList = {
   Home: undefined;
-  Chapters: undefined;
+  Timeline: undefined;
   Characters: undefined;
   Premium: undefined;
 };
@@ -42,8 +43,8 @@ function TabNavigator() {
 
           if (route.name === 'Home') {
             iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Chapters') {
-            iconName = focused ? 'book' : 'book-outline';
+          } else if (route.name === 'Timeline') {
+            iconName = focused ? 'timeline' : 'timeline-outline';
           } else if (route.name === 'Characters') {
             iconName = focused ? 'people' : 'people-outline';
           } else if (route.name === 'Premium') {
@@ -77,7 +78,7 @@ function TabNavigator() {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Chapters" component={ChapterGuideScreen} />
+      <Tab.Screen name="Timeline" component={TimelineScreen} />
       <Tab.Screen name="Characters" component={CharacterUniverseScreen} />
       <Tab.Screen name="Premium" component={PremiumScreen} />
     </Tab.Navigator>
